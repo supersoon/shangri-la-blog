@@ -1,11 +1,17 @@
 # SHANGRI-LA — restored
 
-Faithful static rebuild of the 2006–2007 travel blog *SHANGRI-LA — "poppetsch on tour"*,
-originally at `road.supersoon.net` (WordPress + newspaper-10 theme).
+Faithful static rebuild of the 2006–2007 travel blog *SHANGRI-LA — "travel diary of
+herr_schaft and supersoon"*, originally at `road.supersoon.net` (WordPress).
 
-Rebuilt from the BackWPup export (`full_backup/…2017-08-07….zip`). Text encoding
-(UTF-8-as-Latin-1 mojibake) repaired with ftfy; the original theme CSS is reused
-verbatim with a small responsive block appended for phones.
+Rebuilt from the BackWPup export (`full_backup/…2017-08-07….zip`). The **original
+custom 2007 theme** was recovered from the backup's customized `wp-content/themes/
+newspaper-10/` templates (style.css v2.0 by supersoon) — a dark charcoal (#484848),
+three-column travel-diary design with the "shangri / we're back!" logo, the "ON THE
+ROAD AGAIN" banner, grey rounded-corner heading bars and light-blue metadata. The
+database's plain black-on-white default was the *degraded* look after a later WP
+upgrade; this restores the real design. Text encoding (UTF-8-as-Latin-1 mojibake)
+repaired with ftfy; dead 2007 widgets (Plazes, Flickr/Skype badges, PayPal, ShinyStat)
+dropped, layout made responsive.
 
 ## Contents
 - `index.html` — all 42 posts, newest first
