@@ -9,10 +9,11 @@
 <body>
 <div class="page">
 	<div id="header">
-		<h1><a href="index.html">SHANGRI-LA</a></h1>
-		<div class="description">poppetsch on tour</div>
-		<ul>
-			<li><a href="index.html">Home</a></li>
+		<a href="index.html" class="brand" title="SHANGRI-LA &mdash; poppetsch on tour">
+			<span class="visually-hidden">SHANGRI-LA &mdash; poppetsch on tour</span>
+		</a>
+		<ul class="nav">
+			<li><a href="index.html">home</a></li>
 			<li><a href="page-supersoon.html">supersoon</a></li>
 			<li><a href="page-herr-schaft.html">herr_schaft</a></li>
 			<li><a href="page-their-itinerary.html">their itinerary</a></li>
@@ -21,7 +22,7 @@
 	<div id="content">
 		<div class="post" id="post-60">
 			<h2>Maennerkueste, Maedchenkueste.</h2>
-			<p class="postmetadata">Posted in <a href="category-australia.html">australia</a> | Monday, March 12th, 2007</p>
+			<p class="postmetadata">tags: <a href="category-australia.html">australia</a> | Monday, March 12th, 2007</p>
 			<div class="entrytext">
 <p>Jetzt, wo wir an beiden seitlichen Enden alles in diesem Land gesehen, begutachtet und mit Vorurteilen vermessen haben, koennen wir viele vage Einschaetzungen abgeben. Und eines mit Sicherheit feststellen: Die Westkueste ist fuer Maenner. Die Ostkueste fuer Maedchen.<br />
 An der Westkueste definieren sich die Menschen ueber die Zahl der Zylinder ihrer Autos - <a target="_blank" href="http://www.hyundai.com.au/swf/default.aspx?vehicle=getz">4</a> sind fuer Opfer, mit <a target="_blank" href="http://www.ford.com.au/servlet/ContentServer?cid=1137385390907&pagename=Page&c=DFYPage">6</a> kann man schon mal den <a target="_blank" href="http://www.flickr.com/photos/stpaulirocks/405612140/">Ellenbogen raushaengen</a>, aber erst mit <a target="_blank" href="http://www.holdencampaign.com.au/thunder/content.html">8</a> geht man breitbeinig die Strasse runter - an der Ostkueste zaehlt, ob man bei der Premiere der <a target="_blank" href="http://www.frenchfilmfestival.org/">franzoesischen Filmtage</a> war.<br />
@@ -32,15 +33,36 @@ An der Westkueste hast du keine Chance, gesellschaftlich akzeptiert zu werden, w
 	</div>
 	<div id="sidebar">
 		<ul>
-			<li>
-				<h2>Search</h2>
+			<li class="logo">
+				<a href="index.html"><img src="images/logo.gif" width="240"
+					alt="'Shangri la' is a mystical, harmonious valley"
+					title="'Shangri la' is a mystical, harmonious valley" /></a>
+			</li>
+			<li><h2>great colourful teaser</h2>
+				<img src="images/teaser.gif" width="240" height="126" alt="20 Minuten Altona" />
+			</li>
+			<li><h2>coming soon to a town near you</h2>
+				<img src="images/bigad.jpg" width="240" alt="Die Kilometer. Die Kontrollen. Der Schlussstrich. Road. Show. Coming. Soon." />
+			</li>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li><h2>search</h2>
 				<form id="searchform" onsubmit="return doSearch(event)">
-					<div><input type="text" id="s" name="s" placeholder="search the archive" />
-					<input type="submit" id="searchsubmit" value="Search" /></div>
+					<div><input type="text" id="s" name="s" placeholder="search the diary" />
+					<input type="submit" id="searchsubmit" value="go" /></div>
 				</form>
 				<div id="searchresults"></div>
 			</li>
-			<li><h2>Categories</h2>
+			<li><h2>the travellers</h2>
+				<ul>
+<li><a href="page-supersoon.html">supersoon</a></li>
+<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+<li><a href="page-their-itinerary.html">their itinerary</a></li>
+				</ul>
+			</li>
+			<li><h2>tags</h2>
 				<ul>
 <li><a href="category-australia.html">australia</a> (18)</li>
 <li><a href="category-cons.html">cons</a> (4)</li>
@@ -54,14 +76,7 @@ An der Westkueste hast du keine Chance, gesellschaftlich akzeptiert zu werden, w
 <li><a href="category-uncategorized.html">Uncategorized</a> (1)</li>
 				</ul>
 			</li>
-			<li><h2>Pages</h2>
-				<ul>
-<li><a href="page-supersoon.html">supersoon</a></li>
-<li><a href="page-herr-schaft.html">herr_schaft</a></li>
-<li><a href="page-their-itinerary.html">their itinerary</a></li>
-				</ul>
-			</li>
-			<li><h2>Archives</h2>
+			<li><h2>archives</h2>
 				<ul>
 <li><a href="archive-2007-04.html">April 2007</a> (1)</li>
 <li><a href="archive-2007-03.html">March 2007</a> (11)</li>
@@ -70,17 +85,17 @@ An der Westkueste hast du keine Chance, gesellschaftlich akzeptiert zu werden, w
 <li><a href="archive-2006-12.html">December 2006</a> (3)</li>
 				</ul>
 			</li>
-			<li><h2>Meta</h2>
+			<li><h2>meta</h2>
 				<ul>
-					<li>Originally at <code>road.supersoon.net</code></li>
-					<li>Archived 2017 &middot; restored 2026</li>
-					<li><a href="https://wordpress.org/">WordPress</a></li>
+					<li>originally at <code>road.supersoon.net</code></li>
+					<li>a travel diary, 2006&ndash;2007</li>
+					<li>archived 2017 &middot; restored 2026</li>
 				</ul>
 			</li>
 		</ul>
 	</div>
 	<div id="footer">
-		<p>SHANGRI-LA &mdash; poppetsch on tour. Restored from a 2017 backup.</p>
+		<p>SHANGRI-LA &mdash; poppetsch on tour. Restored from a 2017 backup &middot; original design by supersoon.</p>
 	</div>
 </div>
 <script>

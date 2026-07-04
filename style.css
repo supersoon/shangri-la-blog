@@ -1,368 +1,170 @@
-/*  
-Theme Name:Newspaper
-Theme URI:http://www.studieren-info.de/
-Description:A simple Newspaper-Theme
-Version:1.0
-Author:Studieren-Info.de
-Author URI:http://www.studieren-info.de/
-
-	The CSS, XHTML and design is released under GPL:
-	http://www.opensource.org/licenses/gpl-license.php
-	
+/*
+  SHANGRI-LA — "travel diary of herr_schaft and supersoon"
+  Faithful reconstruction of the original 2007 theme (style.css v2.0 by supersoon),
+  cleaned of invalid markup and made responsive. Palette, layout and type preserved.
 */
 
-
-
-/* Begin Main-Layout */
-*{
-	margin:0;
-	padding:0
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-	background:#fff;
-	border-top:10px solid #000;
-	color:#666;
-	font:small arial,verdana,sans-serif;
-	text-align:center
+	background: #484848;
+	color: #E0E0E0;
+	font: 13px/1.5 verdana, geneva, sans-serif;
+	padding: 0 0 40px 0;
 }
 
 .page {
-	background:#fff;
-	margin:0 auto;
-	text-align:left;
-	width:730px
-	}
+	width: 1040px;           /* 1000px inner grid + 20px padding each side */
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: left;
+	padding: 0 20px;
+}
 
+/* --- Header / masthead: the "ON THE ROAD AGAIN" banner + logo --- */
+#header { padding: 24px 0 6px 0; }
+
+#header .brand {
+	display: block;
+	height: 113px;
+	max-width: 577px;
+	background: url("images/bg.gif") no-repeat left top;
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+.visually-hidden {
+	position: absolute; width: 1px; height: 1px;
+	overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+#header ul.nav {
+	list-style: none;
+	padding: 6px 0 0 0;
+	margin: 0 0 10px 0;
+}
+#header ul.nav li { display: inline-block; margin: 0 4px 0 0; }
+#header ul.nav li a {
+	display: inline-block;
+	background: #009ee0;
+	color: #fff;
+	padding: 4px 12px;
+	font: 12px/1 helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#header ul.nav li a:hover { background: #00b6ff; }
+
+/* --- Three-column layout: content 480 + two sidebars 240 --- */
 #content {
-	float:left;
-	margin:0 0 20px 0;
-	width:480px
-	}
-	
+	float: left;
+	width: 480px;
+	margin: 0 0 20px 0;
+}
 #sidebar {
-	float:left;
-	margin:0 0 20px 20px;
-	width:230px
-	}
+	float: left;
+	width: 240px;
+	margin: 0 0 20px 20px;
+}
 
 #footer {
-	border-top:1px solid #000;
-	clear:both;
-	margin:0 20px;
-	padding:10px 0;
-	text-align:center
-	}
-/* End Main-Layout */
-
-
-
-/* Begin Header */
-h1 {
-	font:2.9em georgia,"trebuchet ms",arial,sans-serif;
-	padding:30px 0 0 0;
-	text-align:center;
-	text-transform:uppercase
-	}
-	
-h1 a:link, h1 a:visited, h1 a:active, h1 a:hover{
-	text-decoration:none;
-	color:#000
-	}
-
-.description {
-	color:#777;
-	font:2.0em georgia,"trebuchet ms",arial,sans-serif;
-	padding:0 0 5px 0;
-	text-align:center;
-	text-transform:uppercase
-	}
-	
-#header ul{
-	border-bottom:2px solid #000;
-	border-top:1px solid #000;
-	padding:3px 0;
+	clear: both;
+	color: #808080;
+	margin: 30px 0 0 0;
+	padding: 12px 0;
+	border-top: 1px solid #5a5a5a;
+	text-align: center;
+	font-size: 11px;
 }
+#footer a { color: #808080; }
 
-#header ul li {
-	display:inline;
-	padding:0 30px 0 0
+/* --- Headings: grey rounded-corner bars --- */
+h2, h3, h4, h5, h6 { color: #fff; font: normal 1em tahoma, arial, sans-serif; margin: 20px 0 0 0; }
+
+#content h2 {
+	font: bold 20px/1.2 arial, sans-serif;
+	background: #646464;
+	padding: 6px 10px;
+	border-top-right-radius: 12px;
 }
-
-#header ul li a:link, #header ul li a:active, #header ul li a:visited, #header ul li a:hover{
-	color:#000;
-	font:1.1em georgia,"trebuchet ms";
-	text-decoration:none;
-	text-transform:uppercase
+#sidebar h2 {
+	font: bold 13px/1.2 arial, sans-serif;
+	background: #646464;
+	padding: 5px 8px;
+	border-top-right-radius: 10px;
+	text-transform: lowercase;
 }
-/* End Header */
+h2 a, h3 a { color: #fff; text-decoration: none; }
+h2 a:hover { text-decoration: underline; }
 
+/* --- Post meta + body --- */
+.postmetadata { color: #A2DFFF; font-size: 11px; padding: 6px 0; }
+.postmetadata a { color: #A2DFFF; text-decoration: none; }
+.postmetadata a:hover { text-decoration: underline; }
 
+.entry, .entrytext { line-height: 1.55; margin: 8px 0 0 0; }
+.entry p, .entrytext p { margin: 0 0 15px 0; }
+.entrytext strong { color: #fff; }
 
-/* Begin Content*/
-h2,h3,h4,h5,h6{
-	color:#000;
-	font:normal 1.5em georgia,"trebuchet ms";
-	margin:20px 0 0 0
-	}
+a { color: #fff; text-decoration: underline; }
+a:hover { color: #A2DFFF; }
 
-h2,h3{
-	border-bottom:1px solid #000
-	}
+.post { margin: 0 0 26px 0; }
+.pagetitle { margin-bottom: 4px; }
 
-h2 a:link, h2 a:visited, h2 a:active, h2 a:hover,
-h3 a:link, h3 a:visited, h3 a:active, h3 a:hover{
-	color:#000;
-	text-decoration:none
+/* --- Sidebar artwork + lists --- */
+#sidebar .logo { list-style: none; margin: 4px 0 18px 0; }
+#sidebar ul { list-style: none; }
+#sidebar li { margin: 0 0 16px 0; }
+#sidebar li img { display: block; max-width: 100%; height: auto; }
+#sidebar ul ul { margin: 6px 0 0 0; }
+#sidebar ul ul li {
+	margin: 0;
+	padding: 3px 0;
+	border-bottom: 1px solid #565656;
+	font-size: 12px;
 }
+#sidebar ul ul li a { color: #E0E0E0; text-decoration: none; }
+#sidebar ul ul li a:hover { color: #fff; text-decoration: underline; }
 
-.postmetadata {
-	color:#555;
-	font-size:.85em;
-	padding:2px 0 0 0
+/* --- Search --- */
+#searchform { margin: 6px 0; }
+#searchform input[type=text] {
+	width: 175px; padding: 3px; border: 1px solid #666;
+	background: #2f2f2f; color: #E0E0E0;
 }
-
-.postmetadata a:link, .postmetadata a:visited, .postmetadata a:active{
-	color:#555;
-	text-decoration:none
+#searchform input[type=submit] {
+	padding: 3px 8px; border: 0; background: #009ee0; color: #fff; cursor: pointer;
 }
+#searchresults ul { margin: 8px 0 0 0; }
+#searchresults li { border-bottom: 1px solid #565656; padding: 3px 0; font-size: 12px; }
+#searchresults li a { color: #A2DFFF; text-decoration: none; }
+#searchresults p { font-size: 12px; color: #999; }
 
-.postmetadata a:hover{
-	text-decoration:underline
-}
-
-.entry, .entrytext{
-	line-height:150%;
-	margin:2px 0 0 0
-	}
-	
-.entrytext p{
-	margin:0 0 15px 0
-	}
-
-a:link,a:visited,a:active,a:hover{
-	color:#000;
-	text-decoration:underline
-}
-/* End Content*/
-
-
-
-/* Begin Comments */
-.commentlist li, #commentform input, #commentform textarea {
-	font-size:0.85em
-	}
-	
-.commentlist li {
-	font-weight:bold
-	}
-
-.commentlist cite, .commentlist cite a {
-	font-weight:bold;
-	font-style:normal;
-	font-size:1.1em
-	}
-
-.commentlist p {
-	font-weight:normal;
-	line-height:140%;
-	text-transform:none
-	}
-
-.commentmetadata {
-	font-weight:normal
-	}
-
-.commentlist {
-	padding:0;
-	text-align:justify
-	}
-
-.commentlist li {
-	margin:0px 0 15px 16px;
-	padding:5px 10px 0 0;
-	list-style:decimal
-	}
-
-.commentlist p {
-	margin:10px 5px 10px 0
-	}
-
-#commentform p {
-	margin:5px 0
-	}
-
-.commentmetadata {
-	margin:0;
-	display:block
-	}
-/* End Comments */
-
-	
-
-/* Begin Lists */
-.entry ul, .entry ol,
-.entrytext ul, .entrytext ol{
-	margin:5px 0 5px 26px
-	}
-
-#sidebar ul li{
-	list-style:none
-	}
-
-#sidebar ul li ul li{
-	border-bottom:1px solid #ddd;
-	padding:2px 0
-	}
-
-#sidebar ul li ul li a:link, #sidebar ul li ul li a:visited, #sidebar ul li ul li a:active{
-	color:#444;
-	text-decoration:none
-}
-
-#sidebar ul li ul li a:hover{
-	color:#000;
-	text-decoration:underline
-}
-/* End Entry Lists */
-
-
-
-/* Begin Images */
-p img {
-	padding:0;
-	max-width:100%
-	}
-
-img.centered {
-	display:block;
-	margin-left:auto;
-	margin-right:auto
-	}
-	
-img.alignright {
-	padding:4px;
-	margin:0 0 2px 7px;
-	display:inline
-	}
-
-img.alignleft {
-	padding:4px;
-	margin:0 7px 2px 0;
-	display:inline
-	}
-
-.alignright {
-	float:right
-	}
-	
-.alignleft {
-	float:left
-	}
-/* End Images */
-
-
-
-/* Begin Form Elements */
-#searchform {
-	margin:2px 0;
-	padding:5px 0
-	}
-
-#sidebar2 #searchform #s {
-	width:130px;
-	padding:2px
-	}
-
-#sidebar2 #searchsubmit {
-	padding:1px
-	}
-
-.entry form { 
-	text-align:center
-	}
-
-select {
-	width:130px
-	}
-
-#commentform input {
-	width:170px;
-	padding:2px;
-	margin:5px 5px 1px 0
-	}
-
-#commentform textarea {
-	width:100%;
-	padding:2px
-	}
-
-#commentform #submit {
-	margin:0;
-	float:right
-	}
-/* End Form Elements */
-
-
-
-
-/* Begin Various Tags & Classes */
-code {
-	font:1em 'Courier New', Courier, Fixed
-	}
-
-acronym, abbr, span.caps
-{
-	cursor:help;
-	font-size:0.9em;
-	letter-spacing:.07em
-	}
-
-acronym, abbr {
-	border-bottom:1px dashed #226
-	}
+/* --- Content images, blockquotes, lists --- */
+.entrytext img, .entry img, p img { max-width: 100%; height: auto; }
+img.alignright, .alignright { float: right; margin: 0 0 6px 10px; }
+img.alignleft, .alignleft { float: left; margin: 0 10px 6px 0; }
+.center { text-align: center; }
 
 blockquote {
-	background:#f3f3f3;
-	border:1px solid #000;
-	line-height:120%;
-	margin:10px 0;
-	padding:5px 10px 5px 10px
+	background: #3d3d3d;
+	border-left: 4px solid #009ee0;
+	line-height: 1.4;
+	margin: 12px 0;
+	padding: 8px 14px;
 }
+blockquote cite { display: block; margin-top: 6px; color: #A2DFFF; }
 
-blockquote cite {
-	margin:5px 0 0;
-	display:block
-	}
+.entry ul, .entry ol, .entrytext ul, .entrytext ol { margin: 8px 0 12px 26px; }
 
-.center {
-	text-align:center
-	}
+.navigation { text-align: center; margin: 10px 0 40px 0; }
+hr { display: none; }
 
-hr {
-	clear:both;
-	display:none
-	}
-
-a img {
-	border:none
-	}
-
-.navigation {
-	display:block;
-	text-align:center;
-	margin-top:10px;
-	margin-bottom:60px
-	}
-/* End Various Tags & Classes*/
-
-/* --- 2026 restoration: responsive + faithful additions (non-destructive) --- */
-img { max-width: 100%; height: auto; }
-@media (max-width: 760px) {
-	.page { width: auto; margin: 0 12px; }
-	#content, #sidebar { float: none; width: auto; margin: 0 0 20px 0; }
-	h1 { font-size: 2.2em; }
+/* --- Responsive: collapse to a single column on narrow screens --- */
+@media (max-width: 1080px) {
+	.page { width: auto; }
+	#content, #sidebar { float: none; width: auto; margin: 0 0 24px 0; }
+	#sidebar { max-width: 480px; }
+	#content h2 { font-size: 18px; }
 }
-.pagetitle { border-bottom: 1px solid #000; }
-#searchresults ul { margin: 5px 0 5px 20px; }
-#searchresults li { list-style: square; }
