@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHANGRI-LA &raquo; Neue Spezies entdeckt.</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+<div class="page">
+	<div id="header">
+		<h1><a href="index.html">SHANGRI-LA</a></h1>
+		<div class="description">poppetsch on tour</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="page-supersoon.html">supersoon</a></li>
+			<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+			<li><a href="page-their-itinerary.html">their itinerary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="post" id="post-57">
+			<h2>Neue Spezies entdeckt.</h2>
+			<p class="postmetadata">Posted in <a href="category-australia.html">australia</a> | Friday, March 2nd, 2007</p>
+			<div class="entrytext">
+<p>Es ist geschehen. Wir sind ohne Auto. Die uns umgebende Geschwindigkeit hat sich damit dramatisch verringert. Einige Entdeckungsmoeglichkeiten sind uns genommen. Neue Formen der Beschaeftigung treten an ihre Stelle. Ausgehen zum Beispiel. Lange Naechte in Vergnuegungsetablissements.<br />
+Bereits bei den ersten Versuchen in dieser ungewohnten Betaetigung haben wir grosse Erfolge erzielt. Wir sind nicht zusammengeschlagen worden, obwohl wir aus Deutschland sind - 'i hate germans. not you personally, i like you, 'cause we're talking now, and i'm not going to hit you. but i hate germans.'<br />
+Und wir haben eine neue Spezies entdeckt: Den nordaustralischen Kampftaenzer.</p>
+<p>Nicht zu verwechseln mit der <a target="_blank" href="http://de.wikipedia.org/wiki/Capoeira">brasilianischen Variante</a> ist der nordaustralische Kampftaenzer eine recht junge evolutionaere Kombination der Gattungen Kampfsportler und Kampftrinker. Als solcher ist er von breiter Statur, traegt eine beindruckende Nackenmuskulatur und ist naturgegeben betrunken. Seine Eigenart wird bei einsetzender Musik deutlich. Waehrend die Gesichtszuege des Kampftaenzers zu jenen eines alle Mutterliebe vergessenden Bullterriers gefrieren, setzt sich der Koerper in Bewegung. Die motorischen Ablaeufe lassen dabei darauf schliessen, dass der Kampftaenzer durch Betrachten zu vieler <a target="_blank" href="http://www.myspace.com/justintimberlake">Justin Timberlake Videos</a> der eigenen Koerpersprache verlustig gegangen ist und statt dessen ein Tanzflaechenleben als Choreografie-Sklave fuehrt, auf das neben Herrn Timberlake allenfalls noch die <a target="_blank" href="http://youtube.com/watch?v=3SU5dpeNu48">Scissor Sisters</a> Einfluss haben.<br />
+Das Betrachten des nordaustralischen Kampftaenzers ist nicht ohne Gefahr. Er ist im nuechternen Zustand kaum zu ertragen und regt daher zum Konsum grosser Mengen Alkohols an. Spaetfolgen wie die Neigung, mit dem Selbststudium diverser Kampfsportarten zu beginnen, koennen zum jetzigen Zeitpunkt noch nicht ausgeschlossen werden.</p>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Search</h2>
+				<form id="searchform" onsubmit="return doSearch(event)">
+					<div><input type="text" id="s" name="s" placeholder="search the archive" />
+					<input type="submit" id="searchsubmit" value="Search" /></div>
+				</form>
+				<div id="searchresults"></div>
+			</li>
+			<li><h2>Categories</h2>
+				<ul>
+<li><a href="category-australia.html">australia</a> (18)</li>
+<li><a href="category-cons.html">cons</a> (4)</li>
+<li><a href="category-germany.html">germany</a> (7)</li>
+<li><a href="category-india.html">india</a> (10)</li>
+<li><a href="category-japan.html">japan</a> (5)</li>
+<li><a href="category-offline.html">offline</a> (2)</li>
+<li><a href="category-pros.html">pros</a> (13)</li>
+<li><a href="category-sights.html">sights</a> (5)</li>
+<li><a href="category-thailand.html">thailand</a> (5)</li>
+<li><a href="category-uncategorized.html">Uncategorized</a> (1)</li>
+				</ul>
+			</li>
+			<li><h2>Pages</h2>
+				<ul>
+<li><a href="page-supersoon.html">supersoon</a></li>
+<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+<li><a href="page-their-itinerary.html">their itinerary</a></li>
+				</ul>
+			</li>
+			<li><h2>Archives</h2>
+				<ul>
+<li><a href="archive-2007-04.html">April 2007</a> (1)</li>
+<li><a href="archive-2007-03.html">March 2007</a> (11)</li>
+<li><a href="archive-2007-02.html">February 2007</a> (12)</li>
+<li><a href="archive-2007-01.html">January 2007</a> (15)</li>
+<li><a href="archive-2006-12.html">December 2006</a> (3)</li>
+				</ul>
+			</li>
+			<li><h2>Meta</h2>
+				<ul>
+					<li>Originally at <code>road.supersoon.net</code></li>
+					<li>Archived 2017 &middot; restored 2026</li>
+					<li><a href="https://wordpress.org/">WordPress</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<p>SHANGRI-LA &mdash; poppetsch on tour. Restored from a 2017 backup.</p>
+	</div>
+</div>
+<script>
+window.__INDEX__ = null;
+async function loadIndex(){
+  if(window.__INDEX__) return window.__INDEX__;
+  const r = await fetch('search-index.json'); window.__INDEX__ = await r.json();
+  return window.__INDEX__;
+}
+async function doSearch(e){
+  e.preventDefault();
+  const q = document.getElementById('s').value.trim().toLowerCase();
+  const box = document.getElementById('searchresults');
+  if(!q){ box.innerHTML=''; return false; }
+  const idx = await loadIndex();
+  const hits = idx.filter(p => (p.t+' '+p.b).toLowerCase().includes(q)).slice(0,20);
+  box.innerHTML = hits.length
+    ? '<ul>'+hits.map(h=>`<li><a href="${h.u}">${h.t}</a></li>`).join('')+'</ul>'
+    : '<p>no matches.</p>';
+  return false;
+}
+</script>
+</body>
+</html>

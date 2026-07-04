@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHANGRI-LA &raquo; Ueber den Staedtebau.</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+<div class="page">
+	<div id="header">
+		<h1><a href="index.html">SHANGRI-LA</a></h1>
+		<div class="description">poppetsch on tour</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="page-supersoon.html">supersoon</a></li>
+			<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+			<li><a href="page-their-itinerary.html">their itinerary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="post" id="post-34">
+			<h2>Ueber den Staedtebau.</h2>
+			<p class="postmetadata">Posted in <a href="category-india.html">india</a>, <a href="category-pros.html">pros</a>, <a href="category-sights.html">sights</a> | Thursday, January 11th, 2007</p>
+			<div class="entrytext">
+<p>Haette bitte jemand kurz die Musse, eine Definition von Stadt zu erstellen oder von irgendwoher herzukopieren?<br />
+So lange die echte nicht da ist, eine kurze handgestrickte: Eine ganze Weile sind die Menschen einfach so und ein wenig haltlos in der Gegend herumgestromert. Alle durcheinander. Mit der Erfindung der Sozialhilfe (oder auch ALG II) stiess dieses Gesellschaftsmodell jedoch an seine Grenzen, weil die auszahlende Stelle einen festen Wohnsitz vorschrieb. Die Stadt wurde erfunden. Die Menschen wohnen da seither mehr oder minder stetig an einem festen Platz.</p>
+<p>Nach dieser Definition ist Delhi keine Stadt. Mit Ausnahme von Neu Delhi vielleicht. Einer aeusserst massiven, in Summe jedoch recht farblosen Erfindung der ebenso farblosen Englaender.<br />
+Das eigentliche Delhi - zu finden in Old Delhi oder im Paharganj - ist keine Stadt. Obwohl schon mehrere Jahrhunderte da, hat es Delhi noch nicht geschafft, sich eine ansatzweise feste Form zu geben, in der Orte oder gar Menschen zuverlaessig auffindbar waeren.<br />
+Delhi fuehlt sich eher an, wie eine 10 Millionen Menschen grosse Karawane, die eben zufaellig Halt gemacht hat, aber gleich wieder weiter ziehen wird. Alles ist in Bewegung. Alles schuettelt sich unter einer leichten Schicht Staub. Nichts ist fest. Die Haeuser koennten Morgen woanders sein. Es ist sowieso nichts drin, was laenger als eine Stunde zum Zusammenpacken braucht. Alle Einkaufsstrassen sind nicht mehr als ein loser fliegender Basar. Und die Menschen brummen in staendiger Unruhe umher, als muessten die besten Plaetze im Treck gesichert werden.</p>
+<p>Vielleicht sollte man in Delhi ALG II einfuehren. Das koennte helfen.<br />
+Andererseits. Ist es auch so ganz nett.</p>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Search</h2>
+				<form id="searchform" onsubmit="return doSearch(event)">
+					<div><input type="text" id="s" name="s" placeholder="search the archive" />
+					<input type="submit" id="searchsubmit" value="Search" /></div>
+				</form>
+				<div id="searchresults"></div>
+			</li>
+			<li><h2>Categories</h2>
+				<ul>
+<li><a href="category-australia.html">australia</a> (18)</li>
+<li><a href="category-cons.html">cons</a> (4)</li>
+<li><a href="category-germany.html">germany</a> (7)</li>
+<li><a href="category-india.html">india</a> (10)</li>
+<li><a href="category-japan.html">japan</a> (5)</li>
+<li><a href="category-offline.html">offline</a> (2)</li>
+<li><a href="category-pros.html">pros</a> (13)</li>
+<li><a href="category-sights.html">sights</a> (5)</li>
+<li><a href="category-thailand.html">thailand</a> (5)</li>
+<li><a href="category-uncategorized.html">Uncategorized</a> (1)</li>
+				</ul>
+			</li>
+			<li><h2>Pages</h2>
+				<ul>
+<li><a href="page-supersoon.html">supersoon</a></li>
+<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+<li><a href="page-their-itinerary.html">their itinerary</a></li>
+				</ul>
+			</li>
+			<li><h2>Archives</h2>
+				<ul>
+<li><a href="archive-2007-04.html">April 2007</a> (1)</li>
+<li><a href="archive-2007-03.html">March 2007</a> (11)</li>
+<li><a href="archive-2007-02.html">February 2007</a> (12)</li>
+<li><a href="archive-2007-01.html">January 2007</a> (15)</li>
+<li><a href="archive-2006-12.html">December 2006</a> (3)</li>
+				</ul>
+			</li>
+			<li><h2>Meta</h2>
+				<ul>
+					<li>Originally at <code>road.supersoon.net</code></li>
+					<li>Archived 2017 &middot; restored 2026</li>
+					<li><a href="https://wordpress.org/">WordPress</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<p>SHANGRI-LA &mdash; poppetsch on tour. Restored from a 2017 backup.</p>
+	</div>
+</div>
+<script>
+window.__INDEX__ = null;
+async function loadIndex(){
+  if(window.__INDEX__) return window.__INDEX__;
+  const r = await fetch('search-index.json'); window.__INDEX__ = await r.json();
+  return window.__INDEX__;
+}
+async function doSearch(e){
+  e.preventDefault();
+  const q = document.getElementById('s').value.trim().toLowerCase();
+  const box = document.getElementById('searchresults');
+  if(!q){ box.innerHTML=''; return false; }
+  const idx = await loadIndex();
+  const hits = idx.filter(p => (p.t+' '+p.b).toLowerCase().includes(q)).slice(0,20);
+  box.innerHTML = hits.length
+    ? '<ul>'+hits.map(h=>`<li><a href="${h.u}">${h.t}</a></li>`).join('')+'</ul>'
+    : '<p>no matches.</p>';
+  return false;
+}
+</script>
+</body>
+</html>

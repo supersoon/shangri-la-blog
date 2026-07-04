@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHANGRI-LA &raquo; Am Wegesrand, Teil 2.</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+<div class="page">
+	<div id="header">
+		<h1><a href="index.html">SHANGRI-LA</a></h1>
+		<div class="description">poppetsch on tour</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="page-supersoon.html">supersoon</a></li>
+			<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+			<li><a href="page-their-itinerary.html">their itinerary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="post" id="post-44">
+			<h2>Am Wegesrand, Teil 2.</h2>
+			<p class="postmetadata">Posted in <a href="category-australia.html">australia</a>, <a href="category-thailand.html">thailand</a> | Monday, February 5th, 2007</p>
+			<div class="entrytext">
+<p>Wo waren wir gleich? Ach ja. Thailand. Dann Australien. Mittlerweile zwei Staedte. Im Kurzabriss ging das so:</p>
+<p>Delhi -> Bangkok; Verkehrsmittel: Flugzeug.<br />
+Indien Thailand heisst kleiner Kulturschock gratis. Mehr muss nicht mehr. Ist eh alles gesagt.</p>
+<p>Bangkok -> Kanchanaburi / River Kwai -> Bangkok; Verkehrsmittel: Minibus, Floss, Elefant.<br />
+Schauplatz von 3 day 2 nights. Einer Elefantenwaesche am Morgen. Und Tigertaetscheln am Mittag. In Summe: Machen.</p>
+<p>Bangkok -> Sydney; Verkehrsmittel: Flugzeug.<br />
+Am anderen Ende. Und doch fast wie Zuhause. Zumindest an der Oberflaeche ist Australien in der Stadt immer gleich ganz da. Eine Woche zwischen Sightseeing und Wiedersehen. Voruebergehendes Ende des Hotellebens dank Aufnahme bei supersoons Fruenden Britta und Jonathan in Redfern. Wer da sonst noch alles auf der Liste war verraet der auf Nachfrage. Im kleinen Kreis bekannt sonst nur eine gewisse C., einst in Hamburg zu Gast.<br />
+Die Stadt fuer jetzt stiefmuetterlich behandelt. Aber wir kommen ja wieder.</p>
+<p>Sydney -> Perth; Verkehrsmittel: Flugzeug.<br />
+1,4 Mio. Einwohner und doch eine Kleinstadt. Irgendwie. Trotz der Hochhaeuser in der Mitte macht dieses Ende des Kontinents einen sehr laendlichen Eindruck. Passend dazu: Jedes dritte Auto auf der Strasse ist mit BlingBling getunt. Doerfler sind halt ueberall Doerfler.</p>
+<p>Perth -> Darwin; Verkehrsmittel: Auto.<br />
+Nana. Das kommt erst noch. Und wird mit Herzklopfen erwartet.</p>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Search</h2>
+				<form id="searchform" onsubmit="return doSearch(event)">
+					<div><input type="text" id="s" name="s" placeholder="search the archive" />
+					<input type="submit" id="searchsubmit" value="Search" /></div>
+				</form>
+				<div id="searchresults"></div>
+			</li>
+			<li><h2>Categories</h2>
+				<ul>
+<li><a href="category-australia.html">australia</a> (18)</li>
+<li><a href="category-cons.html">cons</a> (4)</li>
+<li><a href="category-germany.html">germany</a> (7)</li>
+<li><a href="category-india.html">india</a> (10)</li>
+<li><a href="category-japan.html">japan</a> (5)</li>
+<li><a href="category-offline.html">offline</a> (2)</li>
+<li><a href="category-pros.html">pros</a> (13)</li>
+<li><a href="category-sights.html">sights</a> (5)</li>
+<li><a href="category-thailand.html">thailand</a> (5)</li>
+<li><a href="category-uncategorized.html">Uncategorized</a> (1)</li>
+				</ul>
+			</li>
+			<li><h2>Pages</h2>
+				<ul>
+<li><a href="page-supersoon.html">supersoon</a></li>
+<li><a href="page-herr-schaft.html">herr_schaft</a></li>
+<li><a href="page-their-itinerary.html">their itinerary</a></li>
+				</ul>
+			</li>
+			<li><h2>Archives</h2>
+				<ul>
+<li><a href="archive-2007-04.html">April 2007</a> (1)</li>
+<li><a href="archive-2007-03.html">March 2007</a> (11)</li>
+<li><a href="archive-2007-02.html">February 2007</a> (12)</li>
+<li><a href="archive-2007-01.html">January 2007</a> (15)</li>
+<li><a href="archive-2006-12.html">December 2006</a> (3)</li>
+				</ul>
+			</li>
+			<li><h2>Meta</h2>
+				<ul>
+					<li>Originally at <code>road.supersoon.net</code></li>
+					<li>Archived 2017 &middot; restored 2026</li>
+					<li><a href="https://wordpress.org/">WordPress</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<p>SHANGRI-LA &mdash; poppetsch on tour. Restored from a 2017 backup.</p>
+	</div>
+</div>
+<script>
+window.__INDEX__ = null;
+async function loadIndex(){
+  if(window.__INDEX__) return window.__INDEX__;
+  const r = await fetch('search-index.json'); window.__INDEX__ = await r.json();
+  return window.__INDEX__;
+}
+async function doSearch(e){
+  e.preventDefault();
+  const q = document.getElementById('s').value.trim().toLowerCase();
+  const box = document.getElementById('searchresults');
+  if(!q){ box.innerHTML=''; return false; }
+  const idx = await loadIndex();
+  const hits = idx.filter(p => (p.t+' '+p.b).toLowerCase().includes(q)).slice(0,20);
+  box.innerHTML = hits.length
+    ? '<ul>'+hits.map(h=>`<li><a href="${h.u}">${h.t}</a></li>`).join('')+'</ul>'
+    : '<p>no matches.</p>';
+  return false;
+}
+</script>
+</body>
+</html>
